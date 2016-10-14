@@ -1,0 +1,16 @@
+<h2>New Post</h2>
+<hr>
+
+<%= simple_form_for @post, url: root_path, as: 'new post',
+  wrapper_mappings: {
+    check_boxes: :vertical_radio_and_checkboxes,
+    radio_buttons: :vertical_radio_and_checkboxes,
+    file: :vertical_file_input,
+    boolean: :vertical_boolean
+  } do |f| %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.input :image, as: :file %>
+  <br>
+  <%= f.button :submit %>
+<% end %>
