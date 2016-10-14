@@ -1,7 +1,7 @@
-<%= @posts.each do |x| %>
+<% @posts.each do |post| %>
   <div class="white">
-   <%= image_tag post.image_url(:medium) %>
+   <%= image_tag post.image_url %>
    <br />
-   <%= x.description %>
+   <%= post.description %>
  </div>
 <% end %>
